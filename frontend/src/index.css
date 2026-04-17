@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-duo-green: #58CC02;
+  --color-duo-green-dark: #46a302;
+  --color-duo-red: #FF4B4B;
+  --color-duo-blue: #1CB0F6;
+  --color-duo-gold: #FFD700;
+  --color-duo-navy: #1F2937;
+  --color-duo-card: #FFFFFF;
+  --color-duo-border: #E5E7EB;
+  --color-duo-bg: #F7F7F7;
+  --color-duo-text: #3C3C3C;
+  --color-duo-muted: #777777;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f7f7f7;
+  color: #3c3c3c;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  70% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.3s ease-out;
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
